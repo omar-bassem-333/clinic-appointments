@@ -1,6 +1,6 @@
 # Class Diagram (P5)
 
-``` mermaid
+```mermaid
 classDiagram
     class Patient {
         +patientId
