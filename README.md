@@ -13,7 +13,7 @@
 
 | 20240710 | youssef mohamed | programming20062024 |  (https://github.com/omar-bassem-333/clinic-appointments/pull/4) |
 
-| 2020257 | seif ahmed | seif | (https://github.com/omar-bassem-333/clinic-appointments/pull/6?utm_source=chatgpt.com) |
+| 2020257 | seif ahmed | seif | (https://github.com/omar-bassem-333/clinic-appointments/pull/6) |
 
 ## Run
 ```
