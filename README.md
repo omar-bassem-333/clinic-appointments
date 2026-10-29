@@ -6,14 +6,13 @@
 
 ## Team
 | id | name | branch | PR link |
-| 20240364 | omar bassem | omar-bassem-333-patch-1 | (https://github.com/omar-bassem-333/clinic-appointments/pull/1) |
-| 20240063 | ahmed youssef | TODO | TODO |
-  main
-| TODO | TODO | TODO | TODO |
-| TODO | TODO | TODO | TODO |
 
-Conflict Drill: UNCLAIMED
-| 20240710 | youssef mohamed | programming20062024 | TODO |
+| 20240364 | omar bassem | omar-bassem-333-patch-1 | (https://github.com/omar-bassem-333/clinic-appointments/pull/1) |
+
+| 20240063 | ahmed youssef | TODO | (https://github.com/omar-bassem-333/clinic-appointments/pull/2) |
+
+| 20240710 | youssef mohamed | programming20062024 |  (https://github.com/omar-bassem-333/clinic-appointments/pull/4) |
+
 | 2020257 | seif ahmed | seif | (https://github.com/omar-bassem-333/clinic-appointments/pull/6?utm_source=chatgpt.com) |
 
 ## Run
