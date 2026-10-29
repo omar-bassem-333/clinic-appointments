@@ -1,0 +1,44 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Required files exist
+        run: |
+          for f in README.md 1_requirements.md 2_use_cases.md 3_candidate_classes.md 4_class_diagram.md 5_sequence_diagram.md 6_ai_journal.md main.py; do
+            test -f "$f" || { echo "Missing file: $f"; exit 1; }
+          done
+
+      - name: No conflict markers
+        run: |
+          if grep -rnE '^(<<<<<<<|=======$|>>>>>>>)' --include='*.md' --include='*.py' .; then
+            echo "Conflict markers found"; exit 1
+          fi
+
+      - name: No TODO left in deliverables
+        run: |
+          if grep -n 'TODO' 1_requirements.md 2_use_cases.md 3_candidate_classes.md 4_class_diagram.md 5_sequence_diagram.md 6_ai_journal.md; then
+            echo "TODO still in a file"; exit 1
+          fi
+
+      - name: Diagrams have mermaid blocks
+        run: |
+          for f in 2_use_cases.md 4_class_diagram.md 5_sequence_diagram.md; do
+            grep -q 'mermaid' "$f" || { echo "No mermaid block in $f"; exit 1; }
+          done
+
+      - name: Run main.py and tests
+        run: |
+          python main.py
+          python -m unittest
