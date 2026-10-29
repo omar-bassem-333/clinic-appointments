@@ -35,7 +35,7 @@ jobs:
       - name: Diagrams have mermaid blocks
         run: |
           for f in 2_use_cases.md 4_class_diagram.md 5_sequence_diagram.md; do
-            grep -q 'mermaid' "$f" || { echo "No mermaid block in $f"; exit 1; }
+            grep -q '```mermaid' "$f" || { echo "No mermaid block in $f"; exit 1; }
           done
 
       - name: Run main.py and tests
